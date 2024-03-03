@@ -4,17 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="" />
+    <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/BaseAssertions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadeFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestMakerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestMakerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestSpecificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestSpecificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2dBBfJnNPdSvhFLKRKM1OiVxwf0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,22 +46,26 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "Setting-Up-Requests",
+    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas" />
+      <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas^" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.CreateBookingApiTests.testingFrameWork (2)">
+    <configuration name="ReadFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Modules.FileReaders.ReadFiles" />
       <module name="RestFullBookerAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.RestFull.*" />
+          <option name="PATTERN" value="org.RestFull.Modules.FileReaders.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.AppTest" />
-      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -56,9 +83,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateBookingApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateBookingApiTests.testingFrameWork (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="testingFrameWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateBookingApiTests.testingFrameWork (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="testingFrameWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateBookingApiTests.testingFrameWork" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="testingFrameWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
+        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (2)" />
+        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork" />
+        <item itemvalue="Application.ReadFiles" />
+        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (1)" />
+        <item itemvalue="TestNG.CreateBookingApiTests" />
       </list>
     </recent_temporary>
   </component>
