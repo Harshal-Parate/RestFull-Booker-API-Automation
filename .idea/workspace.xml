@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/BaseAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/UsageOfObjectMapper/FromDataToObjects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadeFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadPropertiesFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestMakerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestMakerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestSpecificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/RequestSpecificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingBookingDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingBookingDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingRoot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +48,25 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Setting-Up-Requests",
-    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java"
+    "git-widget-placeholder": "payload-Class-Setup",
+    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/TestNg-XML-Files" />
       <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas" />
       <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas^" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateBookingApiTests.testingFrameWork (2)">
-    <configuration name="ReadFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Modules.FileReaders.ReadFiles" />
+  <component name="RunManager" selected="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml">
+    <configuration name="FromDataToObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Modules.UsageOfObjectMapper.FromDataToObjects" />
       <module name="RestFullBookerAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.RestFull.Modules.FileReaders.*" />
+          <option name="PATTERN" value="org.RestFull.Modules.UsageOfObjectMapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,36 +122,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateBookingApiTests.testingFrameWork (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="METHOD_NAME" value="testingFrameWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/TestNg-XML-Files/testng-test1.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateBookingApiTests.testingFrameWork" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="METHOD_NAME" value="testingFrameWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -156,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (2)" />
-        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork" />
-        <item itemvalue="Application.ReadFiles" />
-        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (1)" />
+        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" />
+        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" />
         <item itemvalue="TestNG.CreateBookingApiTests" />
+        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (1)" />
+        <item itemvalue="Application.FromDataToObjects" />
       </list>
     </recent_temporary>
   </component>
