@@ -4,14 +4,15 @@ import io.restassured.response.Response;
 
 public class ResponseParserService {
 
-    public static String parsedResponse(Response response) {
+    public static <T> T parsedResponse(Response response, Class<T> className) {
+        return (T) response.as(className);
+    }
 
-        return response.then()
+    public static String parsedResponse(Response response) {
+        return response
+                .then()
                 .extract()
                 .response()
                 .asString();
-
     }
-
-
 }

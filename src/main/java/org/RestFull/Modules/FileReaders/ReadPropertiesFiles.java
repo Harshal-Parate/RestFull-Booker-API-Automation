@@ -3,7 +3,9 @@ package org.RestFull.Modules.FileReaders;
 import java.io.FileReader;
 import java.util.Properties;
 
-public class ReadFiles {
+public class ReadPropertiesFiles {
+
+    private ReadPropertiesFiles() {}
 
     private static Properties properties;
     private static FileReader fileReader;
@@ -40,15 +42,11 @@ public class ReadFiles {
     }
 
     public static String getAuth(String auth) {
-
         try {
-            properties = new Properties();
-            fileReader = new FileReader("src/test/resources/Configuration/config.properties");
-            properties.load(fileReader);
             return properties.getProperty(auth);
         } catch (Exception e) {
-            System.out.println("File Error");
+            System.out.println("File Error "+ e.getMessage());
+            return null;
         }
-        return null;
     }
 }

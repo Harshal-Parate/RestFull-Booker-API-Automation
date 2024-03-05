@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation">
+        <classes>
+            <class name="org.RestFull.Tests.CreateBookingApiTests">
+                <methods>
+                    <include name="testingStringPayloadPassing"/>
+                    <include name="testingMapPayloadPassing"/>
+                    <include name="testingPayloadPassedUsingObjectMatcher"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
