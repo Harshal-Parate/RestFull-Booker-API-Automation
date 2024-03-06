@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 public class ResponseParserService {
 
     public static <T> T parsedResponse(Response response, Class<T> className) {
-        return (T) response.as(className);
+        return  response.as(className);
     }
 
     public static String parsedResponse(Response response) {
