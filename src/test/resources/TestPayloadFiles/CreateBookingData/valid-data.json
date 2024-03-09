@@ -1,4 +1,5 @@
- {
+[
+  {
     "firstname": "Harshal",
     "lastname": "Parate",
     "totalprice": 1000,
@@ -8,4 +9,27 @@
       "checkout": "2019-01-01"
     },
     "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Hitanshu",
+    "lastname": "Bagde",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2018-01-01",
+      "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Jaiveek",
+    "lastname": "Parate",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2018-01-01",
+      "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
   }
+]

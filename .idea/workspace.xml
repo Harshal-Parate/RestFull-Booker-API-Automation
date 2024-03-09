@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/DataBuilderUsingPojoAndDataProvider/BuildingDataDirectly.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/DataBuilderUsingPojoAndDataProvider/Deserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/DataBuilderUsingPojoAndDataProvider/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/RequestFormationService/ResponseParserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,20 @@
       <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas^" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CreateBookingApiTests.testingUsingDataByPojo">
+  <component name="RunManager" selected="TestNG.CreateBookingApiTests.testingUsingDataProviders">
+    <configuration name="ReadJsonFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Modules.FileReaders.ReadJsonFiles" />
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Modules.FileReaders.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RestFull Booker API Automation" />
       <method v="2">
@@ -64,41 +80,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="RestFull Booker API Automation" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateBookingApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateBookingApiTests.testingFrameWork (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="METHOD_NAME" value="testingFrameWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,20 +102,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateBookingApiTests.testingUsingDataProviders" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/TestNg-XML-Files/testng-test1.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="testingUsingDataProviders" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ReadExcelData (2)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Utilities" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Utilities.ReadExcelData" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadExcelData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Utilities" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Utilities.ReadExcelData" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -143,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataProviders" />
         <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataByPojo" />
-        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" />
-        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" />
-        <item itemvalue="TestNG.CreateBookingApiTests" />
-        <item itemvalue="TestNG.CreateBookingApiTests.testingFrameWork (1)" />
+        <item itemvalue="Application.ReadJsonFiles" />
+        <item itemvalue="TestNG.ReadExcelData (2)" />
+        <item itemvalue="TestNG.ReadExcelData" />
       </list>
     </recent_temporary>
   </component>

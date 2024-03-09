@@ -13,6 +13,9 @@ public final class CreateBookingFilePaths {
     public static String invalidCreateBookingPayload = "";
 
     @Getter
+    public static String validCreateBookingResponse = "src/test/resources/ResponseData/Create Booking Response/Response-data.json";
+
+    @Getter
     public static String validCreateBookingResponseSchema = "src/test/resources/ResponseSchemas/CreateBookingResponseSchemas/create-booking-valid-response-schema.json";
 
     @Getter

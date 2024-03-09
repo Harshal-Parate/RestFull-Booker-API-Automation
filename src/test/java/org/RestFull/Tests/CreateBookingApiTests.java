@@ -2,6 +2,7 @@ package org.RestFull.Tests;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.RestFull.DataProviders.JsonDataProvider;
 import org.RestFull.FilePaths.CreateBookingFilePaths;
 import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.BuildingDataDirectly;
 import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Deserializer;
@@ -9,13 +10,17 @@ import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Serializer;
 import org.RestFull.Modules.RequestFormationService.RequestMakerService;
 import org.RestFull.Modules.RequestFormationService.RequestSpecificationService;
 import org.RestFull.Modules.RequestFormationService.ResponseParserService;
+import org.RestFull.Pojos.RequestPOJO.CreateBooking.CreateBookingRoot;
 import org.RestFull.Pojos.ResponsePOJO.CreateBooking.CreateBookingResponseRoot;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import static org.RestFull.DataProviders.DataProviderUtil.dataProviderCombiner;
 import static org.RestFull.Endpoints.StringEndpoints.validCreateBookingEndpoint;
 import static org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Serializer.objectToString;
 import static org.RestFull.Modules.UsageOfObjectMapper.FromDataToObjects.mapJsonFileToCreateBookingRoot;
@@ -23,7 +28,7 @@ import static org.RestFull.Modules.FileReaders.ReadPropertiesFiles.getBaseUri;
 
 public final class CreateBookingApiTests {
 
-    private CreateBookingApiTests() {}
+    //private CreateBookingApiTests() {}
 
     @Test
     public void testingStringPayloadPassing() {
@@ -94,13 +99,13 @@ public final class CreateBookingApiTests {
         RequestSpecification requestSpecification = RequestSpecificationService
                 .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
 
-
         /*
         response 1 --> using post method created under request make service,
         this post accepts the request Spec and class type payload.
         Second step --> pasring the response using the response pojos
         Third step -->can be asserted later if needed
          */
+
         Response response1 = RequestMakerService.post(requestSpecification, BuildingDataDirectly.payload());
         CreateBookingResponseRoot parsedResponse2 = ResponseParserService.parsedResponse(response1,CreateBookingResponseRoot.class);
         System.out.println(parsedResponse2.getBooking().getFirstname());
@@ -119,10 +124,44 @@ public final class CreateBookingApiTests {
         CreateBookingResponseRoot createBookingResponseRoot = Deserializer.stringToObjects(parsedResponse, CreateBookingResponseRoot.class);
         System.out.println(createBookingResponseRoot.getBooking().getLastname());
 
-
-
-
     }
+
+    @Test(dataProvider = "combinedDataProvider")
+    public void testingUsingDataProviders(CreateBookingRoot data, CreateBookingResponseRoot expectedResponse) {
+
+       // Request Specification creation using abstracted method
+        RequestSpecification requestSpecification = RequestSpecificationService
+                .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
+
+        // Actual response creation
+        Response response1 = RequestMakerService.post(requestSpecification, data);
+
+        // Actual response parsing
+        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response1,CreateBookingResponseRoot.class);
+
+
+        // Asserting the Actual with the Expected --> both fetched from json files
+        Assert.assertEquals(parsedResponseActual.getBooking().getFirstname(), expectedResponse.getBooking().getFirstname());
+    }
+
+//    @DataProvider(name = "bookingPayload")
+//    public Object[][] provideBookingData(){
+//        return JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingPayload(), CreateBookingRoot.class);
+//    }
+//
+//    @DataProvider(name = "bookingResponse")
+//    public Object[][] provideBookingResponse(){
+//        return JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingResponse(), CreateBookingResponseRoot.class);
+//    }
+
+    @DataProvider(name = "combinedDataProvider")
+    public Object[][] provideCombinedData() {
+        Object[][] payloadData = JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingPayload(), CreateBookingRoot.class);
+        Object[][] responseData = JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingResponse(), CreateBookingResponseRoot.class);
+        return dataProviderCombiner(payloadData, responseData);
+    }
+
+
 
 
 }
