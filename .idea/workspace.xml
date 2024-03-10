@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/Excel data files/RestFull Booker.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/BaseAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/ResponseLevelAssertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Excel data files/RestFull Booker.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ResponseData/Create Booking Response/Response-data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +57,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/TestNg-XML-Files" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Data/ResponseData" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Data/Excel data files" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Data" />
       <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas" />
-      <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas^" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.CreateBookingApiTests.testingUsingDataProviders">
@@ -137,17 +143,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadExcelData" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Utilities" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Utilities.ReadExcelData" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/TestNg-XML-Files/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -157,10 +156,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataProviders" />
+        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng.xml" />
         <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataByPojo" />
         <item itemvalue="Application.ReadJsonFiles" />
         <item itemvalue="TestNG.ReadExcelData (2)" />
-        <item itemvalue="TestNG.ReadExcelData" />
       </list>
     </recent_temporary>
   </component>

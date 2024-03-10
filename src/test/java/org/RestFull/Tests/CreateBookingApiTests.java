@@ -2,17 +2,18 @@ package org.RestFull.Tests;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.RestFull.Asstertions.CreateBookingAssertions;
+import org.RestFull.Asstertions.ResponseLevelAssertions;
 import org.RestFull.DataProviders.JsonDataProvider;
 import org.RestFull.FilePaths.CreateBookingFilePaths;
 import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.BuildingDataDirectly;
 import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Deserializer;
-import org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Serializer;
 import org.RestFull.Modules.RequestFormationService.RequestMakerService;
 import org.RestFull.Modules.RequestFormationService.RequestSpecificationService;
 import org.RestFull.Modules.RequestFormationService.ResponseParserService;
 import org.RestFull.Pojos.RequestPOJO.CreateBooking.CreateBookingRoot;
 import org.RestFull.Pojos.ResponsePOJO.CreateBooking.CreateBookingResponseRoot;
-import org.testng.Assert;
+import org.apache.http.HttpStatus;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -50,7 +51,10 @@ public final class CreateBookingApiTests {
                 .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
         Response response = RequestMakerService.post(requestSpecification, payload);
         CreateBookingResponseRoot parsedResponse = ResponseParserService.parsedResponse(response, CreateBookingResponseRoot.class);
-        System.out.println(parsedResponse.getBooking().getFirstname());
+
+        //Custom response level assertions
+        ResponseLevelAssertions.assertThat(response)
+                .hasStatusCode(HttpStatus.SC_OK);
     }
 
     @Test
@@ -74,7 +78,10 @@ public final class CreateBookingApiTests {
                 .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
         Response response = RequestMakerService.post(requestSpecification, payload);
         CreateBookingResponseRoot parsedResponse = ResponseParserService.parsedResponse(response, CreateBookingResponseRoot.class);
-        System.out.println(parsedResponse.getBooking().getFirstname());
+
+        //Custom response level assertions
+        ResponseLevelAssertions.assertThat(response)
+                .hasStatusCode(HttpStatus.SC_OK);
     }
 
 
@@ -90,7 +97,9 @@ public final class CreateBookingApiTests {
                 .parsedResponse(response, CreateBookingResponseRoot.class);
 
 
-        System.out.println(parsedResponse.getBooking().getFirstname());
+        //Custom response level assertions
+        ResponseLevelAssertions.assertThat(response)
+                .hasStatusCode(HttpStatus.SC_OK);
     }
 
     @Test
@@ -100,7 +109,7 @@ public final class CreateBookingApiTests {
                 .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
 
         /*
-        response 1 --> using post method created under request make service,
+        response 1 --> using post method created under request maker service,
         this post accepts the request Spec and class type payload.
         Second step --> pasring the response using the response pojos
         Third step -->can be asserted later if needed
@@ -108,11 +117,14 @@ public final class CreateBookingApiTests {
 
         Response response1 = RequestMakerService.post(requestSpecification, BuildingDataDirectly.payload());
         CreateBookingResponseRoot parsedResponse2 = ResponseParserService.parsedResponse(response1,CreateBookingResponseRoot.class);
-        System.out.println(parsedResponse2.getBooking().getFirstname());
+
+        //Custom response level assertions
+        ResponseLevelAssertions.assertThat(response1)
+                .hasStatusCode(HttpStatus.SC_OK);
 
 
         /*
-        Step 1 --> making payload using gson from the classs objectToString
+        Step 1 --> making payload using gson from the class objectToString
         Step 2 --> Creating response with the help of post method
         which in this case accepts req spec and payload in string
         Step 3 --> Parsing the response for step 2 into string
@@ -122,7 +134,10 @@ public final class CreateBookingApiTests {
         Response response = RequestMakerService.post(requestSpecification, payLoad);
         String parsedResponse = ResponseParserService.parsedResponse(response);
         CreateBookingResponseRoot createBookingResponseRoot = Deserializer.stringToObjects(parsedResponse, CreateBookingResponseRoot.class);
-        System.out.println(createBookingResponseRoot.getBooking().getLastname());
+
+        //Custom response level assertions
+        ResponseLevelAssertions.assertThat(response)
+                .hasStatusCode(HttpStatus.SC_OK);
 
     }
 
@@ -134,14 +149,31 @@ public final class CreateBookingApiTests {
                 .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
 
         // Actual response creation
-        Response response1 = RequestMakerService.post(requestSpecification, data);
+        Response response = RequestMakerService.post(requestSpecification, data);
 
         // Actual response parsing
-        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response1,CreateBookingResponseRoot.class);
+        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response,CreateBookingResponseRoot.class);
 
 
         // Asserting the Actual with the Expected --> both fetched from json files
-        Assert.assertEquals(parsedResponseActual.getBooking().getFirstname(), expectedResponse.getBooking().getFirstname());
+        // Assert.assertEquals(parsedResponseActual.getBooking().getFirstname(), expectedResponse.getBooking().getFirstname());
+
+
+        ResponseLevelAssertions.assertThat(response)
+                .hasStatusCode(HttpStatus.SC_OK);
+
+        CreateBookingAssertions.assertThat(parsedResponseActual)
+                .hasName(expectedResponse.getBooking().getFirstname());
+
+
+
+
+
+
+
+
+
+
     }
 
 //    @DataProvider(name = "bookingPayload")
@@ -154,6 +186,18 @@ public final class CreateBookingApiTests {
 //        return JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingResponse(), CreateBookingResponseRoot.class);
 //    }
 
+
+
+    /*
+    Data Provider ---> provides data on the basis of parameters provided into the @Test method,
+    this is combine data provider which loads up two types of data
+    1. payload to be sent --> to make request
+    2. response from the JSON file --> to assert and compare
+
+    the method --> dataProviderCombiner(Object[][], Object[][]) accepts the 2D arrays in argument and combine them in another 2D array
+    to keep the size equal for the inputs, i used Math.min function this function make sure that the
+    array in json files with min input should be considered---> check  "dataProviderCombiner" for more info
+     */
     @DataProvider(name = "combinedDataProvider")
     public Object[][] provideCombinedData() {
         Object[][] payloadData = JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingPayload(), CreateBookingRoot.class);

@@ -41,21 +41,26 @@ public class ReadExcelData {
 //                {"Htanshu", "Bagde", 1000, true, "2024-01-01", "2024-01-02", "Eggs"}
 //        };
 //    }
-//
+
+
+
 //    @DataProvider
 //    public Object[][] getDataA() {
 //        return getData1();
 //    }
 
-    @DataProvider
-    public Object[][] getDataB() {
-        return getData("Sheet1");
-    }
 
-    @Test(dataProvider = "getDataB")//, dataProviderClass = ReadExcelFile.class)
-    public void testLoginData(String firstName, String LastName, int paid, boolean depositePaid, String checkIn, String checkOut, String additional ) {
-        System.out.println(firstName+" "+LastName+" "+paid+" "+depositePaid+" "+checkIn+" "+checkOut+" "+additional);
-    }
+//    @DataProvider
+//    public Object[][] getDataB() {
+//        return getData("Sheet1");
+//    }
+
+
+
+//    @Test(dataProvider = "getDataB")//, dataProviderClass = ReadExcelFile.class)
+//    public void testLoginData(String firstName, String LastName, int paid, boolean depositePaid, String checkIn, String checkOut, String additional ) {
+//        System.out.println(firstName+" "+LastName+" "+paid+" "+depositePaid+" "+checkIn+" "+checkOut+" "+additional);
+//    }
 
 
 
