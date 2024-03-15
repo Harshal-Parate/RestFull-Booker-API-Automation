@@ -1,5 +1,6 @@
 package org.RestFull.Tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.RestFull.Asstertions.CreateBookingAssertions;
@@ -145,6 +146,7 @@ public final class CreateBookingApiTests {
     }
 
     @Test(dataProvider = "combinedDataProvider")
+    @Description("Verify the response when valid data i passed")
     public void testingUsingDataProviders(CreateBookingRoot data, CreateBookingResponseRoot expectedResponse) {
 
        // Request Specification creation using abstracted method
