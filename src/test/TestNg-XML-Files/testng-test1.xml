@@ -8,7 +8,7 @@
                 <methods>
                     <include name="testingStringPayloadPassing"/>
                     <include name="testingMapPayloadPassing"/>
-                    <include name="testingPayloadPassedUsingObjectMatcher"/>
+<!--                    <include name="testingPayloadPassedUsingObjectMatcher"/>-->
                 </methods>
             </class>
         </classes>

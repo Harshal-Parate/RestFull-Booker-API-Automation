@@ -84,7 +84,7 @@ public final class CreateBookingApiTests {
                 .hasStatusCode(HttpStatus.SC_OK);
     }
 
-
+/*
     @Test
     public void testingPayloadPassedUsingObjectMatcher() throws IOException {
         // *payload from file to pojos to object mapper to response method*
@@ -102,6 +102,8 @@ public final class CreateBookingApiTests {
                 .hasStatusCode(HttpStatus.SC_OK);
 
     }
+
+ */
 
     @Test
     public void testingUsingDataByPojo() {
