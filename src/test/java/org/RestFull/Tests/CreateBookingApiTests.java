@@ -29,7 +29,7 @@ import static org.RestFull.Modules.FileReaders.ReadPropertiesFiles.getBaseUri;
 
 public final class CreateBookingApiTests {
 
-    //private CreateBookingApiTests() {}
+    private CreateBookingApiTests() {}
 
     @Test
     public void testingStringPayloadPassing() {
@@ -100,6 +100,7 @@ public final class CreateBookingApiTests {
         //Custom response level assertions
         ResponseLevelAssertions.assertThat(response)
                 .hasStatusCode(HttpStatus.SC_OK);
+
     }
 
     @Test
@@ -157,7 +158,6 @@ public final class CreateBookingApiTests {
 
         // Asserting the Actual with the Expected --> both fetched from json files
         // Assert.assertEquals(parsedResponseActual.getBooking().getFirstname(), expectedResponse.getBooking().getFirstname());
-
 
         ResponseLevelAssertions.assertThat(response)
                 .hasStatusCode(HttpStatus.SC_OK);

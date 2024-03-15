@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Data/Excel data files/RestFull Booker.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/FilePaths/CreateBookingFilePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Modules/FileReaders/ReadJsonFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Utilities/ReadExcelData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/BaseAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/ResponseLevelAssertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Asstertions/CreateBookingAssertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/DataProviderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/DataProviders/JsonDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingBookingDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Pojos/RequestPOJO/CreateBooking/CreateBookingBookingDates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Excel data files/RestFull Booker.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ResponseData/Create Booking Response/Response-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Data/TestPayloadFiles/CreateBookingData/valid-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Data/TestPayloadFiles/CreateBookingData/valid-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/TestNg-XML-Files" />
@@ -173,5 +164,9 @@
       <updated>1709471696038</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
