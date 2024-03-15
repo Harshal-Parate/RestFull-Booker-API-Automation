@@ -2,11 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="Data Provider Combine">
+          name="Rest Full Booker">
         <classes>
             <class name="org.RestFull.Tests.CreateBookingApiTests">
                 <methods>
+                    <include name="testingStringPayloadPassing"/>
+                    <include name="testingMapPayloadPassing"/>
+<!--                    <include name="testingPayloadPassedUsingObjectMatcher"/>-->
+                    <include name="testingUsingDataByPojo"/>
                     <include name="testingUsingDataProviders"/>
+                    <include name="provideCombinedData"/>
                 </methods>
             </class>
         </classes>
