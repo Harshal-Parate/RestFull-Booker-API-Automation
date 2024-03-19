@@ -17,15 +17,11 @@ import org.RestFull.Pojos.ResponsePOJO.CreateBooking.CreateBookingResponseRoot;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
 import static org.RestFull.DataProviders.DataProviderUtil.dataProviderCombiner;
 import static org.RestFull.Endpoints.StringEndpoints.validCreateBookingEndpoint;
 import static org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Serializer.objectToString;
-import static org.RestFull.Modules.UsageOfObjectMapper.FromDataToObjects.mapJsonFileToCreateBookingRoot;
 import static org.RestFull.Modules.FileReaders.ReadPropertiesFiles.getBaseUri;
 
 public final class CreateBookingApiTests {
@@ -157,7 +153,7 @@ public final class CreateBookingApiTests {
         Response response = RequestMakerService.post(requestSpecification, data);
 
         // Actual response parsing
-        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response,CreateBookingResponseRoot.class);
+        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response, CreateBookingResponseRoot.class);
 
 
         // Asserting the Actual with the Expected --> both fetched from json files
