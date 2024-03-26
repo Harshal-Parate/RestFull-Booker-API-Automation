@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/RestFull/Listners/Listeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/TestNg-XML-Files" />
@@ -67,7 +70,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateBookingApiTests.testingUsingDataByPojo" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateBookingApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
       <extension name="coverage">
         <pattern>
@@ -77,7 +80,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
       <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="METHOD_NAME" value="testingUsingDataByPojo" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateBookingApiTests.testingStringPayloadPassing" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="testingStringPayloadPassing" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -113,16 +133,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestFullBookerAPIAutomation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/TestNg-XML-Files/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -136,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" />
+        <item itemvalue="TestNG.CreateBookingApiTests.testingStringPayloadPassing" />
+        <item itemvalue="TestNG.CreateBookingApiTests" />
         <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" />
         <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataProviders" />
-        <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng.xml" />
-        <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataByPojo" />
       </list>
     </recent_temporary>
   </component>

@@ -28,6 +28,7 @@ public final class CreateBookingApiTests {
 
     private CreateBookingApiTests() {}
 
+
     @Test
     public void testingStringPayloadPassing() {
 
@@ -204,8 +205,6 @@ public final class CreateBookingApiTests {
         Object[][] responseData = JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingResponse(), CreateBookingResponseRoot.class);
         return dataProviderCombiner(payloadData, responseData);
     }
-
-
 
 
 }
