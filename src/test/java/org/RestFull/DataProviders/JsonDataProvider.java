@@ -40,4 +40,39 @@ public class JsonDataProvider {
         }
         return dataArray; //--> returning the 2D array
     }
+
+
+    // If Jackson Liab is used
+    /*
+
+    import com.fasterxml.jackson.databind.ObjectMapper;
+    import com.fasterxml.jackson.core.type.TypeReference;
+
+    // Initialize ObjectMapper
+    ObjectMapper objectMapper = new ObjectMapper();
+
+    // Define TypeReference for deserialization
+    TypeReference<List<T>> typeReference = new TypeReference<List<T>>() {};
+
+    // Initialize an empty list to hold the data
+    List<T> data = new ArrayList<>();
+
+    // Read and deserialize the JSON data
+    try {
+        data = objectMapper.readValue(new File(jsonFilePath), typeReference);
+    } catch (IOException e) {
+        throw new RuntimeException("Error reading JSON file: " + jsonFilePath, e);
+    }
+
+    // Convert the list of objects into a two-dimensional array
+    Object[][] dataArray = new Object[data.size()][1];
+    for (int i = 0; i < data.size(); i++) {
+        dataArray[i][0] = data.get(i);
+    }
+    return dataArray;
+     */
+
+
+
+
 }
