@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    triggers {
+        cron('H 3 * * *') // Runs every day at 3:00 AM
+    }
+
+    stages {
+        stage('Build - Pull From GIT') {
+            steps {
+                echo "Building..."
+                git branch: 'main',
+                url: 'https://github.com/Harshal-Parate/RestFull-Booker-API-Automation.git'
+            }
+        }
+        stage('Running Tests') {
+            steps {
+                echo "Running..."
+                sh 'clean test -DsuiteXmlFile=testng.xml'
+            }
+        }
+        stage('Generate Reports') {
+            steps {
+                echo "Publishing..."
+                script {
+                    allure([
+                        includeProperties: false,
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [
+                            [path: 'allure-results']
+                        ]
+                    ])
+                }
+            }
+        }
+    }
+}
