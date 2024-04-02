@@ -16,7 +16,7 @@ pipeline {
         stage('Running Tests') {
             steps {
                 echo "Running..."
-                sh 'clean test -DsuiteXmlFile=testng.xml'
+                sh 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
         stage('Generate Reports') {
