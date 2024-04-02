@@ -19,8 +19,11 @@ pipeline {
                     }
                 }
         stage('Running Tests') {
+            environment {
+                PATH = "/opt/homebrew/opt/maven/bin:$PATH"
+            }
             steps {
-                echo "Running..."
+                echo "Running tests..."
                 sh 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
