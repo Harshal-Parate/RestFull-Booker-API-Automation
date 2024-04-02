@@ -13,11 +13,13 @@ pipeline {
                 url: 'https://github.com/Harshal-Parate/RestFull-Booker-API-Automation.git'
             }
         }
+
         stage('Debug') {
                     steps {
                         sh 'printenv'
                     }
-                }
+        }
+
         stage('Running Tests') {
             environment {
                 PATH = "/opt/homebrew/opt/maven/bin:$PATH"
@@ -27,6 +29,7 @@ pipeline {
                 sh 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
+
         stage('Generate Reports') {
             steps {
                 echo "Publishing..."
