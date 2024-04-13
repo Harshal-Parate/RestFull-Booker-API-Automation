@@ -6,7 +6,7 @@
         <listener class-name="org.RestFull.Listners.Listeners"/>
     </listeners>
 
-    <test verbose="2" preserve-order="true" thread-count="4"
+    <test verbose="2" preserve-order="true" thread-count="10"
           name="/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation">
         <classes>
             <class name="org.RestFull.Tests.CreateBookingApiTests">

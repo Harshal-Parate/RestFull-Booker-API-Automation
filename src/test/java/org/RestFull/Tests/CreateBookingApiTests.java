@@ -143,18 +143,20 @@ public final class CreateBookingApiTests {
     }
 
     @Test(dataProvider = "combinedDataProvider")
-    @Description("Verify the response when valid data i passed")
+    @Description("Verify the response when valid data is passed")
     public void testingUsingDataProviders(CreateBookingRoot data, CreateBookingResponseRoot expectedResponse) {
 
        // Request Specification creation using abstracted method
-        RequestSpecification requestSpecification = RequestSpecificationService
-                .requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
+        RequestSpecification requestSpecification =
+                RequestSpecificationService.requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
 
         // Actual response creation
-        Response response = RequestMakerService.post(requestSpecification, data);
+        Response response =
+                RequestMakerService.post(requestSpecification, data);
 
         // Actual response parsing
-        CreateBookingResponseRoot parsedResponseActual = ResponseParserService.parsedResponse(response, CreateBookingResponseRoot.class);
+        CreateBookingResponseRoot parsedResponseActual =
+                ResponseParserService.parsedResponse(response, CreateBookingResponseRoot.class);
 
 
         // Asserting the Actual with the Expected --> both fetched from json files
