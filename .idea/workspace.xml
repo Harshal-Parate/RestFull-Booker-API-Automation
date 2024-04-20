@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9620e7f-d18d-49ea-a630-90d76db56f2f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/415c040b-27b9-4a5b-add9-e4635e39bbee-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5bfe7f2c-458e-4562-8112-603e6e8bd639-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/73ac9419-9619-4287-b4e4-6bf18a9ac355-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7c88ccdf-bc18-4b7e-89e1-54ada95cb4bf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8a692bf7-e325-4a10-bd4f-8882d6c288cb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c34a0157-2a9d-4d08-8489-44d139bc7b91-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e6f9a455-7790-46d8-8bc4-36d6c7a1f23f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f8d0046a-f0ae-4ff2-a4a6-e584ac0aba1f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f97c2664-3c5b-4225-b9d4-ccf86e06d4c3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/RestFull/Tests/CreateBookingApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java",
-    "last_opened_file_path": "/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/TestNg-XML-Files" />
@@ -53,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources/ResponseSchemas/CreateBookingResponseSchemas" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml">
+  <component name="RunManager" selected="TestNG.CreateBookingApiTests.extractTheFieldFromResponse">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RestFull Booker API Automation" />
       <method v="2">
@@ -84,6 +95,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateBookingApiTests.extractTheFieldFromResponse" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestFullBookerAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.RestFull.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
+      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
+      <option name="METHOD_NAME" value="extractTheFieldFromResponse" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateBookingApiTests.testingStringPayloadPassing" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestFullBookerAPIAutomation" />
       <extension name="coverage">
@@ -95,24 +124,6 @@
       <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
       <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
       <option name="METHOD_NAME" value="testingStringPayloadPassing" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateBookingApiTests.testingUsingDataProviders" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestFullBookerAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.RestFull.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.RestFull.Tests" />
-      <option name="MAIN_CLASS_NAME" value="org.RestFull.Tests.CreateBookingApiTests" />
-      <option name="METHOD_NAME" value="testingUsingDataProviders" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -142,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateBookingApiTests.extractTheFieldFromResponse" />
         <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/testng.xml" />
         <item itemvalue="TestNG.CreateBookingApiTests.testingStringPayloadPassing" />
         <item itemvalue="TestNG.CreateBookingApiTests" />
         <item itemvalue="TestNG./Users/harshalparate/Downloads/API Automation Framework/Final Project for RestFull Booker APIs Automation/RestFull Booker API Automation/src/test/TestNg-XML-Files/testng-test1.xml" />
-        <item itemvalue="TestNG.CreateBookingApiTests.testingUsingDataProviders" />
       </list>
     </recent_temporary>
   </component>

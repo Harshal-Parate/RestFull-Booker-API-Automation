@@ -1,6 +1,12 @@
 package org.RestFull.Tests;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import io.qameta.allure.Description;
+import io.restassured.RestAssured;
+import io.restassured.filter.log.ErrorLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.RestFull.Asstertions.CreateBookingAssertions;
@@ -17,8 +23,9 @@ import org.RestFull.Pojos.ResponsePOJO.CreateBooking.CreateBookingResponseRoot;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import java.util.LinkedHashMap;
-import java.util.Map;
+
+import java.util.*;
+
 import static org.RestFull.DataProviders.DataProviderUtil.dataProviderCombiner;
 import static org.RestFull.Endpoints.StringEndpoints.validCreateBookingEndpoint;
 import static org.RestFull.Modules.DataBuilderUsingPojoAndDataProvider.Serializer.objectToString;
@@ -26,7 +33,8 @@ import static org.RestFull.Modules.FileReaders.ReadPropertiesFiles.getBaseUri;
 
 public final class CreateBookingApiTests {
 
-    private CreateBookingApiTests() {}
+    private CreateBookingApiTests() {
+    }
 
 
     @Test
@@ -117,7 +125,7 @@ public final class CreateBookingApiTests {
          */
 
         Response response1 = RequestMakerService.post(requestSpecification, BuildingDataDirectly.payload());
-        CreateBookingResponseRoot parsedResponse2 = ResponseParserService.parsedResponse(response1,CreateBookingResponseRoot.class);
+        CreateBookingResponseRoot parsedResponse2 = ResponseParserService.parsedResponse(response1, CreateBookingResponseRoot.class);
 
         //Custom response level assertions
         ResponseLevelAssertions.assertThat(response1)
@@ -146,7 +154,7 @@ public final class CreateBookingApiTests {
     @Description("Verify the response when valid data is passed")
     public void testingUsingDataProviders(CreateBookingRoot data, CreateBookingResponseRoot expectedResponse) {
 
-       // Request Specification creation using abstracted method
+        // Request Specification creation using abstracted method
         RequestSpecification requestSpecification =
                 RequestSpecificationService.requestSpecification(getBaseUri("Beta"), validCreateBookingEndpoint);
 
@@ -168,16 +176,98 @@ public final class CreateBookingApiTests {
         CreateBookingAssertions.assertThat(parsedResponseActual)
                 .hasName(expectedResponse.getBooking().getFirstname());
 
+    }
+
+    @Test
+    public void loggingErrors() {
+
+        Response response = RestAssured.given()
+                .basePath("")
+                .basePath("")
+                .headers("", "")
+                .filter(new ResponseLoggingFilter())
+                .filter(new ErrorLoggingFilter())
+                .when()
+                .get();
+
+        if (response.getStatusCode() >= 400) {
+            System.out.println(
+                    "Error is " + response.asString()
+            );
+        }
+
+    }
+
+    @Test
+    public void extractTheFieldFromResponse() {
+
+        String payload = "{\n" +
+                "    \"firstname\" : \"Harhal\",\n" +
+                "    \"lastname\" : \"Parate\",\n" +
+                "    \"totalprice\" : 1000,\n" +
+                "    \"depositpaid\" : true,\n" +
+                "    \"bookingdates\" : {\n" +
+                "        \"checkin\" : \"2018-01-01\",\n" +
+                "        \"checkout\" : \"2019-01-01\"\n" +
+                "    },\n" +
+                "    \"additionalneeds\" : \"Breakfast\"\n" +
+                "}";
 
 
+        Response response = RestAssured.given()
+                .basePath("/booking")
+                .baseUri("https://restful-booker.herokuapp.com")
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .when()
+                .post()
+                .then()
+                .extract()
+                .response();
 
+        System.out.println(response.getCookies());
 
+        Set<String> key = new HashSet<>(response.getCookies().keySet());
+        List<String> values = new ArrayList<>(response.getCookies().values());
 
+        Iterator<String> iterator = key.iterator();
+        while (iterator.hasNext()) {
+            String cookie = iterator.next();
+            System.out.println(cookie);
+        }
 
+        for (int i = 0; i < values.size(); i++) {
+            System.out.println(values.get(i));
+        }
+        /*
 
+        {
+            "bookingid": 2841,
+            "booking": {
+                "firstname": "Harshal",
+                "lastname": "Parate",
+                "totalprice": 1000,
+                "depositpaid": true,
+                "bookingdates": {
+                    "checkin": "2018-01-01",
+                    "checkout": "2019-01-01"
+            },
+                "additionalneeds": "Breakfast"
+        }
+
+         */
+
+        JsonObject jsonObject = JsonParser.parseString(response.asString()).getAsJsonObject();
+        String name = jsonObject.getAsJsonObject("booking").get("firstname").getAsString();
+        String date = jsonObject.getAsJsonObject("booking").get("bookingdates").getAsJsonObject().get("checkin").getAsString();
+
+        System.out.println(date);
+
+        System.out.println(name);
 
 
     }
+
 
 //    @DataProvider(name = "bookingPayload")
 //    public Object[][] provideBookingData(){
@@ -188,7 +278,6 @@ public final class CreateBookingApiTests {
 //    public Object[][] provideBookingResponse(){
 //        return JsonDataProvider.provideData(CreateBookingFilePaths.getValidCreateBookingResponse(), CreateBookingResponseRoot.class);
 //    }
-
 
 
     /*
